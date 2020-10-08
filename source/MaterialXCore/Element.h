@@ -538,6 +538,12 @@ class Element : public std::enable_shared_from_this<Element>
         return (it != _attributeMap.end()) ? it->second : EMPTY_STRING;
     }
 
+    /// Return an unordered map of stored attributes.
+    const StringMap& getAttributes() const
+    {
+        return _attributeMap;
+    }
+
     /// Return a vector of stored attribute names, in the order they were set.
     const StringVec& getAttributeNames() const
     {
